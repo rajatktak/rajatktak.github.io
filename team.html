@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </head>
+  <style>
+
+
+  body{
+    font:normal 75% Arial, Helvetica, sans-serif;
+    background-repeat:repeat;
+    background: #f4f4f4;
+    background-size: 100%;
+  }
+
+  canvas{
+    display:block;
+    vertical-align:bottom;
+  }
+
+
+  /* ---- stats.js ---- */
+
+  .count-particles{
+    background: #000022;
+    position: absolute;
+    top: 48px;
+    left: 0;
+    width: 80px;
+    color: #13E8E9;
+    font-size: .8em;
+    text-align: left;
+    text-indent: 4px;
+    line-height: 14px;
+    padding-bottom: 2px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+  }
+
+  .js-count-particles{
+    font-size: 1.1em;
+  }
+
+  #stats,
+  .count-particles{
+    -webkit-user-select: none;
+    margin-top: 5px;
+    margin-left: 5px;
+  }
+
+  #stats{
+    border-radius: 3px 3px 0 0;
+    overflow: hidden;
+  }
+
+  .count-particles{
+    border-radius: 0 0 3px 3px;
+  }
+
+
+  /* ---- particles.js container ---- */
+
+  #particles-js{
+
+    background-color: #f4f4f4;
+    background-repeat: repeat;
+
+  }
+  @media only screen and (max-width : 320px) {
+
+    #particles-js{
+    height:7500px;
+
+    }
+}
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 321px) {
+  #particles-js{
+  height:6500px;
+
+  }
+}
+
+  .box {
+
+  	background:rgba(244,244,244,0.6);
+    width: 80%;
+    margin:30px;
+    padding:15px;
+    position: relative;
+    border-radius: 25px;
+  	text-align:center;
+    justify-content: center;
+    box-sizing: border-box;
+    background-clip: padding-box;
+    border: solid 2px transparent;
+    border-radius: 1em;
+  }
+
+  .box:hover{
+    transition: 1s all ease;
+    box-shadow: -21px 3px 27px -8px rgba(0, 123, 255, 0.5), 1px -19px 15px -16px rgba(40, 167, 69, 0.5),
+      27px 3px 15px -8px rgba(220, 53, 69, 0.5), 0px 28px 41px -8px rgba(255, 193, 7, 0.5);
+  }
+
+  .box:hover .image-wrapper {
+  	padding:0;
+  }
+  .box:hover .box-desc {
+  	color:#000;
+  }
+  .box:hover .social li a {
+  	background: rgba(244,244,244,0.8);
+  	background-image: none;
+  	color:#000;
+  }
+  .box:hover .social li a:hover {
+background: rgba(244,244,244,0.8);
+  	color:#fff;
+  }
+  .image-wrapper {
+
+    max-width: 210px;
+      max-height: 210px;
+  	margin:0 auto;
+      border-radius: 50%;
+      overflow: hidden;
+  background:rgba(244,244,244,0.6);
+      padding: 15px;
+      transition: all 0.5s ease;
+
+  }
+  .image-wrapper img {
+    max-width: 210px;
+    border-radius: 50%;
+      max-height: 210px;
+  border-radius:35px 35px 0px 0px;
+      transition: all 500ms ease;
+
+  }
+  .box-desc {
+  	position:relative;
+  }
+  ul.social {
+  	padding:0;
+  }
+  ul.social li {
+  	display:inline-block;
+  	list-style-type:none;
+  }
+  ul.social li a {
+  	position:relative;
+  	width: 36px;
+      height: 36px;
+  	display:inline-block;
+  	line-height:36px;
+  	border-radius:50%;
+  	color:#fff;
+  	transition: all .5s ease;
+  }
+  .overlay11 {
+position:absolute;
+left:0;
+right:0;
+margin-left:auto;
+margin-right:auto;;
+top:0;
+    z-index: 11111;
+
+  }
+  #ff{   margin-left: auto;
+    margin-right: auto;}
+
+</style>
+  <body>
+<div id="particles-js"></div>
+  <div class="overlay11">
+    <div class="container">
+  	<div class=" row " >
+  		<div class="col-sm-12 col-md-6 col-lg-4 my-auto">
+  			<div class="box">
+  				<div class="image-wrapper mb-3">
+  					<img class="img-fluid" src="founder/Untitled4.PNG" alt="..." />
+  				</div>
+  				<div class="box-desc">
+  					<h5>Amulaya Mahajan</h5>
+  					<p>BOARD ADVISOR,UCD</p>
+  				</div>
+  				<ul class="social">
+  					<li><a href="#"><i class="fab fa-facebook-f fa-2x text-primary"></i></a></li>
+  					<li><a href="#"><i class="fab fa-instagram fa-2x text-danger"></i></a></li>
+  					<li><a href="#"><i class="fab fa-linkedin-in fa-2x text-success"></i></a></li><li><a href="#"><i class="fab fa-github fa-2x text-warning"></i></a></li>
+  				</ul>
+  			</div>
+  		</div>
+  		<div class="col-sm-12 col-md-6 col-lg-4  my-auto">
+  			<div class="box">
+  				<div class="image-wrapper mb-3">
+  					<img class="img-fluid" src="founder/Untitled14.PNG" alt="..." />
+  				</div>
+  				<div class="box-desc">
+  					<h5>Shubham Raj</h5>
+  					<p>BOARD ADVISOR,UCD</p>
+  				</div>
+  				<ul class="social">
+  					<li><a href="#"><i class="fab fa-facebook-f fa-2x text-primary"></i></a></li>
+  					<li><a href="#"><i class="fab fa-instagram fa-2x text-danger"></i></a></li>
+  					<li><a href="#"><i class="fab fa-linkedin-in fa-2x text-success"></i></a></li><li><a href="#"><i class="fab fa-github fa-2x text-warning"></i></a></li>
+  				</ul>
+  			</div>
+  		</div>
+
+      <div class="col-sm-12 col-md-6 col-lg-4  my-auto">
+        <div class="box">
+          <div class="image-wrapper mb-3">
+            <img class="img-fluid" src="founder/Untitled16.PNG" alt="..." />
+          </div>
+          <div class="box-desc">
+            <h5>Swastik Loho Choudhary</h5>
+            <p>BOARD ADVISOR.UCD</p>
+          </div>
+          <ul class="social">
+            <li><a href="#"><i class="fab fa-facebook-f fa-2x text-primary"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram fa-2x text-danger"></i></a></li>
+            <li><a href="#"><i class="fab fa-linkedin-in fa-2x text-success"></i></a></li><li><a href="#"><i class="fab fa-github fa-2x text-warning"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-4  my-auto">
+        <div class="box">
+          <div class="image-wrapper mb-3">
+            <img class="img-fluid" src="founder/Untitled7.PNG" alt="..." />
+          </div>
+          <div class="box-desc">
+            <h5>Paramjeet Singh</h5>
+            <p>BOARD ADVISOR,UCD</p>
+          </div>
+          <ul class="social">
+            <li><a href="#"><i class="fab fa-facebook-f fa-2x text-primary"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram fa-2x text-danger"></i></a></li>
+            <li><a href="#"><i class="fab fa-linkedin-in fa-2x text-success"></i></a></li><li><a href="#"><i class="fab fa-github fa-2x text-warning"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-4  my-auto">
+        <div class="box">
+          <div class="image-wrapper mb-3">
+            <img class="img-fluid" src="founder/Untitled6.PNG" alt="..." />
+          </div>
+          <div class="box-desc">
+            <h5>Megha Kalbalia</h5>
+            <p>PRESIDENT,UCD</p>
+          </div>
+          <ul class="social">
+            <li><a href="#"><i class="fab fa-facebook-f fa-2x text-primary"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram fa-2x text-danger"></i></a></li>
+            <li><a href="#"><i class="fab fa-linkedin-in fa-2x text-success"></i></a></li><li><a href="#"><i class="fab fa-github fa-2x text-warning"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-4  my-auto">
+        <div class="box">
+          <div class="image-wrapper mb-3">
+            <img class="img-fluid" src="founder/Untitled13.PNG" alt="..." />
+          </div>
+          <div class="box-desc">
+            <h5>Sanskar Dua</h5>
+            <p>VICE PRESIDENT,UCD</p>
+          </div>
+          <ul class="social">
+            <li><a href="#"><i class="fab fa-facebook-f fa-2x text-primary"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram fa-2x text-danger"></i></a></li>
+            <li><a href="#"><i class="fab fa-linkedin-in fa-2x text-success"></i></a></li><li><a href="#"><i class="fab fa-github fa-2x text-warning"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-4  my-auto">
+        <div class="box">
+          <div class="image-wrapper mb-3">
+            <img class="img-fluid" src="founder/Untitled12.PNG" alt="..." />
+          </div>
+          <div class="box-desc">
+            <h5>Rohan Rathore</h5>
+            <p>TREASURER,UCD</p>
+          </div>
+          <ul class="social">
+            <li><a href="#"><i class="fab fa-facebook-f fa-2x text-primary"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram fa-2x text-danger"></i></a></li>
+            <li><a href="#"><i class="fab fa-linkedin-in fa-2x text-success"></i></a></li><li><a href="#"><i class="fab fa-github fa-2x text-warning"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-4  my-auto">
+        <div class="box">
+          <div class="image-wrapper mb-3">
+            <img class="img-fluid" src="founder/Untitled5.PNG" alt="..." />
+          </div>
+          <div class="box-desc">
+            <h5>Kushboo Singla</h5>
+            <p>SECRETARY,UCD</p>
+          </div>
+          <ul class="social">
+            <li><a href="#"><i class="fab fa-facebook-f fa-2x text-primary"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram fa-2x text-danger"></i></a></li>
+            <li><a href="#"><i class="fab fa-linkedin-in fa-2x text-success"></i></a></li><li><a href="#"><i class="fab fa-github fa-2x text-warning"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-4  my-auto">
+        <div class="box">
+          <div class="image-wrapper mb-3">
+            <img class="img-fluid" src="founder/Untitled1.PNG" alt="..." />
+          </div>
+          <div class="box-desc">
+            <h5>Abhit Raj</h5>
+            <p>GENERAL SECRETARY,UCD</p>
+          </div>
+          <ul class="social">
+            <li><a href="#"><i class="fab fa-facebook-f fa-2x text-primary"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram fa-2x text-danger"></i></a></li>
+            <li><a href="#"><i class="fab fa-linkedin-in fa-2x text-success"></i></a></li><li><a href="#"><i class="fab fa-github fa-2x text-warning"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-4  my-auto">
+        <div class="box">
+          <div class="image-wrapper mb-3">
+            <img class="img-fluid" src="founder/Untitled2.PNG" alt="..." />
+          </div>
+          <div class="box-desc">
+            <h5>Aditya Kumar</h5>
+            <p>TECHNICAL HEAD,UCD</p>
+          </div>
+          <ul class="social">
+            <li><a href="#"><i class="fab fa-facebook-f fa-2x text-primary"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram fa-2x text-danger"></i></a></li>
+            <li><a href="#"><i class="fab fa-linkedin-in fa-2x text-success"></i></a></li><li><a href="#"><i class="fab fa-github fa-2x text-warning"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-4  my-auto">
+        <div class="box">
+          <div class="image-wrapper mb-3">
+            <img class="img-fluid" src="founder/Untitled15.PNG" alt="..." />
+          </div>
+          <div class="box-desc">
+            <h5>Sparsh Agarwal</h5>
+            <p>PHOTOGRAPHY HEAD,UCD</p>
+          </div>
+          <ul class="social">
+            <li><a href="#"><i class="fab fa-facebook-f fa-2x text-primary"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram fa-2x text-danger"></i></a></li>
+            <li><a href="#"><i class="fab fa-linkedin-in fa-2x text-success"></i></a></li><li><a href="#"><i class="fab fa-github fa-2x text-warning"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-4  my-auto">
+        <div class="box">
+          <div class="image-wrapper mb-3">
+            <img class="img-fluid" src="founder/Untitled10.PNG" alt="..." />
+          </div>
+          <div class="box-desc">
+            <h5>Ribhu Rishi</h5>
+            <p>EVENTS HEAD,UCD</p>
+          </div>
+          <ul class="social">
+            <li><a href="#"><i class="fab fa-facebook-f fa-2x text-primary"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram fa-2x text-danger"></i></a></li>
+            <li><a href="#"><i class="fab fa-linkedin-in fa-2x text-success"></i></a></li><li><a href="#"><i class="fab fa-github fa-2x text-warning"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-4  my-auto">
+        <div class="box">
+          <div class="image-wrapper mb-3">
+            <img class="img-fluid" src="founder/Untitled18.PNG" alt="..." />
+          </div>
+          <div class="box-desc">
+            <h5>Vishal Garg</h5>
+            <p>CSR HEAD,UCD</p>
+          </div>
+          <ul class="social">
+            <li><a href="#"><i class="fab fa-facebook-f fa-2x text-primary"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram fa-2x text-danger"></i></a></li>
+            <li><a href="#"><i class="fab fa-linkedin-in fa-2x text-success"></i></a></li><li><a href="#"><i class="fab fa-github fa-2x text-warning"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-4  my-auto">
+        <div class="box">
+          <div class="image-wrapper mb-3">
+            <img class="img-fluid" src="founder/Untitled17.PNG" alt="..." />
+          </div>
+          <div class="box-desc">
+            <h5>Vatsalya Tegwal</h5>
+            <p>DESIGN HEAD,UCD</p>
+          </div>
+          <ul class="social">
+            <li><a href="#"><i class="fab fa-facebook-f fa-2x text-primary"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram fa-2x text-danger"></i></a></li>
+            <li><a href="#"><i class="fab fa-linkedin-in fa-2x text-success"></i></a></li><li><a href="#"><i class="fab fa-github fa-2x text-warning"></i></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 col-lg-4  my-auto">
+        <div class="box">
+          <div class="image-wrapper mb-3">
+            <img class="img-fluid" src="founder/Untitled3.PNG" alt="..." />
+          </div>
+          <div class="box-desc">
+            <h5>Aditya Rastogi</h5>
+            <p>ASSOCIATE EVENTS HEAD ,UCD</p>
+          </div>
+          <ul class="social">
+            <li><a href="#"><i class="fab fa-facebook-f fa-2x text-primary"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram fa-2x text-danger"></i></a></li>
+            <li><a href="#"><i class="fab fa-linkedin-in fa-2x text-success"></i></a></li><li><a href="#"><i class="fab fa-github fa-2x text-warning"></i></a></li>
+          </ul>
+        </div>
+      </div>
+  		<div class="col-sm-12 col-md-6 col-lg-4  my-auto">
+  			<div class="box">
+  				<div class="image-wrapper mb-3">
+  					<img class="img-fluid" src="founder/Untitled8.PNG" alt="..." />
+  				</div>
+  				<div class="box-desc">
+  					<h5>Prakhar Bauddh</h5>
+  					<p>ASSOCIATE DESIGN HEAD,UCD</p>
+  				</div>
+  				<ul class="social">
+  					<li><a href="#"><i class="fab fa-facebook-f fa-2x text-primary"></i></a></li>
+  					<li><a href="#"><i class="fab fa-instagram fa-2x text-danger"></i></a></li>
+  					<li><a href="#"><i class="fab fa-linkedin-in fa-2x text-success"></i></a></li><li><a href="#"><i class="fab fa-github fa-2x text-warning"></i></a></li>
+  				</ul>
+  			</div>
+  		</div>
+      <div class="col-sm-12 col-md-6 col-lg-4  my-auto">
+  			<div class="box">
+  				<div class="image-wrapper mb-3">
+  					<img class="img-fluid" src="founder/Untitled11.PNG" alt="..." />
+  				</div>
+  				<div class="box-desc">
+  					<h5>Ritik Suman</h5>
+  					<p>ASSOCIATE EDITORIAL HEAD,UCD</p>
+  				</div>
+  				<ul class="social">
+  					<li><a href="#"><i class="fab fa-facebook-f fa-2x text-primary"></i></a></li>
+  					<li><a href="#"><i class="fab fa-instagram fa-2x text-danger"></i></a></li>
+  					<li><a href="#"><i class="fab fa-linkedin-in fa-2x text-success"></i></a></li><li><a href="#"><i class="fab fa-github fa-2x text-warning"></i></a></li>
+  				</ul>
+  			</div>
+  		</div>
+
+  	</div>
+  </div></section>
+  <script src="js/particles.js"></script>
+  <script src="js/app.js"></script>
+
+  <script src="js/ok/stats.js"></script>
+  	  </body>
+</html>
