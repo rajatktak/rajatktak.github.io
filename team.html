@@ -78,22 +78,33 @@
     background-color: #f4f4f4;
     background-repeat: repeat;
 
+  }/* Smartphones (landscape) ----------- */
+  @media only screen and (min-width : 321px) {
+  .overlay11{top:8%;}
+      #particles-js{height: 3900px;}
   }
+
+  /* Smartphones (portrait) ----------- */
   @media only screen and (max-width : 320px) {
-
-    #particles-js{
-    height:7500px;
-
-    }
-}
-/* Smartphones (landscape) ----------- */
-@media only screen and (min-width : 321px) {
-  #particles-js{
-  height:6500px;
-
+  /* Styles */
+  #particles-js{height: 7500px;}
+  .overlay11{top:28%;}
   }
+  /* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1224px) {
+/* Styles */
+  #particles-js{height: 2500px;}
+  .overlay11{top:23%;}
+}/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px)  {
+  #particles-js{height: 2500px;}
+/* Styles */
 }
-
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+/* Styles */
+  #particles-js{height: 3800px;}
+}
   .box {
 
   	background:rgba(244,244,244,0.6);
@@ -177,7 +188,7 @@ left:0;
 right:0;
 margin-left:auto;
 margin-right:auto;;
-top:0;
+
     z-index: 11111;
 
   }
@@ -186,6 +197,61 @@ top:0;
 
 </style>
   <body>
+
+    <header role="banner" class="overlay11">
+
+      <nav class="navbar navbar-expand-lg fixed-top " id="navscroll">
+        <div class="container">
+          <a class="navbar-brand absolute" href="index.html"><img src="img/logo.png" class="img-fluid" width="80px"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class=" collapse navbar-collapse navbar-light" id="nav">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <a id="aa" class="text-success" href="#"><b>Home</b></a>
+              </li>
+              <li class="nav-item">
+                <a id="aa" class="text-success" href="#"><b>About</b></a>
+              </li>
+              <li class="nav-item">
+                <a id="aa"class="text-success" href="team.html
+                "><b>Team</b></a>
+              </li>
+              <li class="nav-item">
+                <a id="aa" class="text-success"href="#"><b>Gallery</b></a>
+              </li>
+              <li class="nav-item">
+                <a id="aa" class="text-danger" href="#"><b>Contact Us</b></a>
+              </li>
+            </ul>
+            <ul class="navbar-nav absolute-right">
+              <li>
+                <a href="login.html" class="text-primary"><b>Login</b></a> <b>/</b> <a href="register.html" class="text-primary"><b>Register</B></a>
+              </li>
+            </ul>
+
+          </div>
+
+        </div>
+
+
+      </nav>
+
+<img src="img/team.gif" width="80%">
+
+
+
+
+
+
+
+
+
+
+
+
 <div id="particles-js"></div>
   <div class="overlay11">
     <div class="container">
