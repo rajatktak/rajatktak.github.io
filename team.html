@@ -17,11 +17,21 @@
   <!-- Latest compiled JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
+      <link rel="stylesheet" href="css/bootstrap.css">
+      <link rel="stylesheet" href="css/animate.css">
+      <link rel="stylesheet" href="css/owl.carousel.min.css">
+
+      <link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">
+      <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css">
+      <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+
+      <!-- Theme Style -->
+      <link rel="stylesheet" href="css/style.css">
   <style>
     body {
       font: normal 75% Arial, Helvetica, sans-serif;
       background-repeat: repeat;
-      background: #f4f4f4;
+      background: #fff;
       background-size: 100%;
     }
 
@@ -31,98 +41,8 @@
     }
 
 
-    /* ---- stats.js ---- */
-
-    .count-particles {
-      background: #000022;
-      position: absolute;
-      top: 48px;
-      left: 0;
-      width: 80px;
-      color: #13E8E9;
-      font-size: .8em;
-      text-align: left;
-      text-indent: 4px;
-      line-height: 14px;
-      padding-bottom: 2px;
-      font-family: Helvetica, Arial, sans-serif;
-      font-weight: bold;
-    }
-
-    .js-count-particles {
-      font-size: 1.1em;
-    }
-
-    #stats,
-    .count-particles {
-      -webkit-user-select: none;
-      margin-top: 5px;
-      margin-left: 5px;
-    }
-
-    #stats {
-      border-radius: 3px 3px 0 0;
-      overflow: hidden;
-    }
-
-    .count-particles {
-      border-radius: 0 0 3px 3px;
-    }
-
-
-    /* ---- particles.js container ---- */
-
-    #particles-js {
-
-      background-color: #f4f4f4;
-      background-repeat: repeat;
-
-    }
-
-      @media only screen and (min-width : 321px) {
-      #particles-js {
-        height: 7500px;
-      }
-    }
-
-    /* Smartphones (portrait) ----------- */
-    @media only screen and (max-width :320px) and (orientation : portrait){
-         #particles-js {
-        height: 7500px;
-      }
-    }
-
-    /* Desktops and laptops ----------- */
-    @media only screen and (min-width : 1224px) {
-
-      /* Styles */
-      #particles-js {
-        height: 2700px;
-      }
-
-
-    }
-
-    /* iPads (landscape) ----------- */
-    @media only screen and (min-width : 768px) and (max-width : 1024px) {
-      #particles-js {
-        height: 2700px;
-      }
-
-      /* Styles */
-    }
-
-   /* @media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
-
-      /* Styles 
-      #particles-js {
-        height: 4000px;
-      }
-    }*/
-
     .box {
-
-      background: rgba(244, 244, 244, 0.6);
+background: rgba(255,255,255,0.9);
       width: 80%;
       margin: 30px;
       padding: 15px;
@@ -132,18 +52,21 @@
       justify-content: center;
       box-sizing: border-box;
       background-clip: padding-box;
-      border: solid 2px transparent;
       border-radius: 1em;
+      box-shadow: 0px 10px 22px -12px  rgba(0,0,0,0.4);
     }
 
     .box:hover {
       transition: 1s all ease;
-      box-shadow: -21px 3px 27px -8px rgba(0, 123, 255, 0.5), 1px -19px 15px -16px rgba(40, 167, 69, 0.5),
-        27px 3px 15px -8px rgba(220, 53, 69, 0.5), 0px 28px 41px -8px rgba(255, 193, 7, 0.5);
+
+box-shadow:inset 0px 15px 220px  rgba(	28,96,137,0.9);
+
+transition: 1s;
     }
 
     .box:hover .image-wrapper {
       padding: 0;
+      background: rgba(	1,194,243,.3);
     }
 
     .box:hover .box-desc {
@@ -151,16 +74,18 @@
     }
 
     .box:hover .social li a {
-      background: rgba(244, 244, 244, 0.8);
       background-image: none;
-      color: #000;
+    color:rgba(	28,96,137,0.9);
+    transition: 2s;
     }
 
     .box:hover .social li a:hover {
-      background: rgba(244, 244, 244, 0.8);
-      color: #fff;
-    }
 
+    }
+.box:hover .image-wrapper{
+
+box-shadow: 0px 10px 20px -12px rgba(	28,96,137,0.9);
+}
     .image-wrapper {
 
       max-width: 210px;
@@ -168,14 +93,14 @@
       margin: 0 auto;
       border-radius: 50%;
       overflow: hidden;
-      background: rgba(244, 244, 244, 0.6);
+      background: rgba(244, 244, 244, 0.2);
       padding: 15px;
       transition: all 0.5s ease;
+
 
     }
 
     .image-wrapper img {
-      max-width: 210px;
       border-radius: 50%;
       max-height: 210px;
       border-radius: 35px 35px 0px 0px;
@@ -203,7 +128,7 @@
       display: inline-block;
       line-height: 36px;
       border-radius: 50%;
-      color: #fff;
+      color:rgba(28,96,137,0.2);
       transition: all .5s ease;
     }
 
@@ -217,67 +142,95 @@
       z-index: 1;
 
     }
+
+    #overlay {
+position: absolute;
+  width: 100%;
+  height:450px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,9,28,0.7);
+  z-index: 11;
+  cursor: pointer;
+}  .overlay1 {
+position:fixed;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+z-index: 2222;
+cursor: pointer;
+}
   </style>
-  <script>
-    $(document).ready(function() {
-      $(window).scroll(function() {
-        var scroll = $(window).scrollTop();
-        if (scroll = 0) {
-          $("#navscroll").css("background", " rgba(255,255,255,0.9)");
-        } else {
-          $("#navscroll").css("background", "rgba(255,255,255,0.7)");
-        }
-      })
-    })
-  </script>
+
 </head>
+
+
+    <!-- END section -->
 
 <body>
 
-  <header role="banner" class="overlay11">
+  <header class="main-header overlay1" style="">
+       <div class="logo">
+ <a href="#" style="font-size:1.5em;padding:0px;"><img src="img/logo.png" style="padding-right:5px" width="30px">UCD</a>
+       </div>
 
-    <nav class="navbar navbar-expand-lg fixed-top " style="background:rgba(255,255,255,0.9)">
-      <div class="container">
-        <a class="navbar-brand absolute" href="index.html"><img src="img/logo.png" class="img-fluid" width="80px"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
-          <i class="fas fa-bars  text-dark"></i>
-        </button>
+       <input type="checkbox" class="menu-btn" id="menu-btn">
+       <label for="menu-btn" class="menu-icon">
+         <span class="menu-icon__line"></span>
+       </label>
 
-        <div class=" collapse navbar-collapse navbar-light" id="nav">
-          <ul class="navbar-nav absolute-right">
-            <li class="nav-item">
-              <a id="aa" class="text-success" href="#"><b>Home</b></a>
-            </li>
-            <li class="nav-item">
-              <a id="aa" class="text-success" href="#"><b>About</b></a>
-            </li>
-            <li class="nav-item">
-              <a id="aa" class="text-success" href="team.html
-                "><b>Team</b></a>
-            </li>
-            <li class="nav-item">
-              <a id="aa" class="text-success" href="#"><b>Gallery</b></a>
-            </li>
-            <li class="nav-item">
-              <a id="aa" class="text-danger" href="#"><b>Contact Us</b></a>
-            </li>
-          </ul>
+       <ul class="nav-links">
+         <li class="nav-link">
+           <a href="index.html">Home</a>
+         </li>
+         <li class="nav-link">
+           <a href="#">About</a>
+         </li>
+         <li class="nav-link">
+           <a href="#">Events</a>
+         </li>
+         <li class="nav-link">
+           <a href="#">Gallery</a>
+         </li>
+         <li class="nav-link">
+           <a href="#">Blog</a>
+         </li>
+         <li class="nav-link">
+           <a href="team.html">Team</a>
+         </li>
+         <li class="nav-link">
+           <a href="contact.html">Contact us</a>
+         </li>
+       </ul>
+     </header>
+<div id="overlay"></div>
+     <section class="site-hero "  style=" background-image:url('img/team1.gif');height: 450px;
+ background-attachment: fixed;
 
+ background-repeat: no-repeat;
+ background-size: cover;
+ transition:0.2s;">
+     <div class="container" style="z-index:22">
+       <div class="row align-items-center justify-content-center ">
+         <div class="col-md-7 text-center">
 
-        </div>
+           <div class=" element-animate">
+             <h1 class="mb-2" style="padding-top:120px;">Our Team</h1>
 
-      </div>
+             <p class="bcrumb"><a href="index.html">Home</a> <span class="sep ion-android-arrow-dropright px-2"></span>  <span class="current">Our Team</span></p>
+           </div>
 
-
-    </nav>
-  </header>
-
-
-  <div id="particles-js"></div>
-  <div class="overlay111">
-    <div class="container">
-      <div class=" row ">
-        <div class="col-sm-12 col-md-6 col-lg-4 my-auto">
+         </div>
+       </div>
+     </div>
+   </section>
+  <div >
+    <div ><center>
+      <div class=" row " style="justify-content: center;background: rgba(0,9,28,1);margin-top:90px;border-radius:25px;width:90%;box-shadow:inset 2px 12px 300px rgba(	1,194,243,.7),2px 8px 30px rgba(0,0,0,0.6);">
+        <div class="col-sm-12 col-md-6 col-lg-4 my-auto" >
           <div class="box">
             <div class="image-wrapper mb-3">
               <img class="img-fluid" src="founder/Untitled4.PNG" alt="..." />
@@ -287,10 +240,10 @@
               <p>BOARD ADVISOR,UCD</p>
             </div>
             <ul class="social">
-              <li><a href="#"><i class="fab fa-facebook-f fa-2x text-primary"></i></a></li>
-              <li><a href="#"><i class="fab fa-instagram fa-2x text-danger"></i></a></li>
-              <li><a href="#"><i class="fab fa-linkedin-in fa-2x text-success"></i></a></li>
-              <li><a href="#"><i class="fab fa-github fa-2x text-warning"></i></a></li>
+              <li><a href="#"><i class="fab fa-facebook-f fa-2x"></i></a></li>
+              <li><a href="#"><i class="fab fa-instagram fa-2x "></i></a></li>
+              <li><a href="#"><i class="fab fa-linkedin-in fa-2x "></i></a></li>
+              <li><a href="#"><i class="fab fa-github fa-2x "></i></a></li>
             </ul>
           </div>
         </div>
@@ -304,10 +257,10 @@
               <p>BOARD ADVISOR,UCD</p>
             </div>
             <ul class="social">
-              <li><a href="#"><i class="fab fa-facebook-f fa-2x text-primary"></i></a></li>
-              <li><a href="#"><i class="fab fa-instagram fa-2x text-danger"></i></a></li>
-              <li><a href="#"><i class="fab fa-linkedin-in fa-2x text-success"></i></a></li>
-              <li><a href="#"><i class="fab fa-github fa-2x text-warning"></i></a></li>
+              <li><a href="#"><i class="fab fa-facebook-f fa-2x"></i></a></li>
+              <li><a href="#"><i class="fab fa-instagram fa-2x "></i></a></li>
+              <li><a href="#"><i class="fab fa-linkedin-in fa-2x "></i></a></li>
+              <li><a href="#"><i class="fab fa-github fa-2x "></i></a></li>
             </ul>
           </div>
         </div>
@@ -318,14 +271,14 @@
               <img class="img-fluid" src="founder/Untitled16.PNG" alt="..." />
             </div>
             <div class="box-desc">
-              <h5>Swastik Loho Choudhary</h5>
+              <h5>Swastik  Choudhary</h5>
               <p>BOARD ADVISOR.UCD</p>
             </div>
             <ul class="social">
-              <li><a href="#"><i class="fab fa-facebook-f fa-2x text-primary"></i></a></li>
-              <li><a href="#"><i class="fab fa-instagram fa-2x text-danger"></i></a></li>
-              <li><a href="#"><i class="fab fa-linkedin-in fa-2x text-success"></i></a></li>
-              <li><a href="#"><i class="fab fa-github fa-2x text-warning"></i></a></li>
+              <li><a href="#"><i class="fab fa-facebook-f fa-2x"></i></a></li>
+              <li><a href="#"><i class="fab fa-instagram fa-2x "></i></a></li>
+              <li><a href="#"><i class="fab fa-linkedin-in fa-2x "></i></a></li>
+              <li><a href="#"><i class="fab fa-github fa-2x "></i></a></li>
             </ul>
           </div>
         </div>
@@ -339,10 +292,10 @@
               <p>BOARD ADVISOR,UCD</p>
             </div>
             <ul class="social">
-              <li><a href="#"><i class="fab fa-facebook-f fa-2x text-primary"></i></a></li>
-              <li><a href="#"><i class="fab fa-instagram fa-2x text-danger"></i></a></li>
-              <li><a href="#"><i class="fab fa-linkedin-in fa-2x text-success"></i></a></li>
-              <li><a href="#"><i class="fab fa-github fa-2x text-warning"></i></a></li>
+              <li><a href="#"><i class="fab fa-facebook-f fa-2x"></i></a></li>
+              <li><a href="#"><i class="fab fa-instagram fa-2x "></i></a></li>
+              <li><a href="#"><i class="fab fa-linkedin-in fa-2x "></i></a></li>
+              <li><a href="#"><i class="fab fa-github fa-2x "></i></a></li>
             </ul>
           </div>
         </div>
@@ -356,10 +309,10 @@
               <p>PRESIDENT,UCD</p>
             </div>
             <ul class="social">
-              <li><a href="#"><i class="fab fa-facebook-f fa-2x text-primary"></i></a></li>
-              <li><a href="#"><i class="fab fa-instagram fa-2x text-danger"></i></a></li>
-              <li><a href="#"><i class="fab fa-linkedin-in fa-2x text-success"></i></a></li>
-              <li><a href="#"><i class="fab fa-github fa-2x text-warning"></i></a></li>
+              <li><a href="#"><i class="fab fa-facebook-f fa-2x"></i></a></li>
+              <li><a href="#"><i class="fab fa-instagram fa-2x "></i></a></li>
+              <li><a href="#"><i class="fab fa-linkedin-in fa-2x "></i></a></li>
+              <li><a href="#"><i class="fab fa-github fa-2x "></i></a></li>
             </ul>
           </div>
         </div>
@@ -373,10 +326,10 @@
               <p>VICE PRESIDENT,UCD</p>
             </div>
             <ul class="social">
-              <li><a href="#"><i class="fab fa-facebook-f fa-2x text-primary"></i></a></li>
-              <li><a href="#"><i class="fab fa-instagram fa-2x text-danger"></i></a></li>
-              <li><a href="#"><i class="fab fa-linkedin-in fa-2x text-success"></i></a></li>
-              <li><a href="#"><i class="fab fa-github fa-2x text-warning"></i></a></li>
+              <li><a href="#"><i class="fab fa-facebook-f fa-2x"></i></a></li>
+              <li><a href="#"><i class="fab fa-instagram fa-2x "></i></a></li>
+              <li><a href="#"><i class="fab fa-linkedin-in fa-2x "></i></a></li>
+              <li><a href="#"><i class="fab fa-github fa-2x "></i></a></li>
             </ul>
           </div>
         </div>
@@ -390,10 +343,10 @@
               <p>TREASURER,UCD</p>
             </div>
             <ul class="social">
-              <li><a href="#"><i class="fab fa-facebook-f fa-2x text-primary"></i></a></li>
-              <li><a href="#"><i class="fab fa-instagram fa-2x text-danger"></i></a></li>
-              <li><a href="#"><i class="fab fa-linkedin-in fa-2x text-success"></i></a></li>
-              <li><a href="#"><i class="fab fa-github fa-2x text-warning"></i></a></li>
+              <li><a href="#"><i class="fab fa-facebook-f fa-2x"></i></a></li>
+              <li><a href="#"><i class="fab fa-instagram fa-2x "></i></a></li>
+              <li><a href="#"><i class="fab fa-linkedin-in fa-2x "></i></a></li>
+              <li><a href="#"><i class="fab fa-github fa-2x "></i></a></li>
             </ul>
           </div>
         </div>
@@ -407,10 +360,10 @@
               <p>SECRETARY,UCD</p>
             </div>
             <ul class="social">
-              <li><a href="#"><i class="fab fa-facebook-f fa-2x text-primary"></i></a></li>
-              <li><a href="#"><i class="fab fa-instagram fa-2x text-danger"></i></a></li>
-              <li><a href="#"><i class="fab fa-linkedin-in fa-2x text-success"></i></a></li>
-              <li><a href="#"><i class="fab fa-github fa-2x text-warning"></i></a></li>
+              <li><a href="#"><i class="fab fa-facebook-f fa-2x"></i></a></li>
+              <li><a href="#"><i class="fab fa-instagram fa-2x "></i></a></li>
+              <li><a href="#"><i class="fab fa-linkedin-in fa-2x "></i></a></li>
+              <li><a href="#"><i class="fab fa-github fa-2x "></i></a></li>
             </ul>
           </div>
         </div>
@@ -424,10 +377,10 @@
               <p>GENERAL SECRETARY,UCD</p>
             </div>
             <ul class="social">
-              <li><a href="#"><i class="fab fa-facebook-f fa-2x text-primary"></i></a></li>
-              <li><a href="#"><i class="fab fa-instagram fa-2x text-danger"></i></a></li>
-              <li><a href="#"><i class="fab fa-linkedin-in fa-2x text-success"></i></a></li>
-              <li><a href="#"><i class="fab fa-github fa-2x text-warning"></i></a></li>
+              <li><a href="#"><i class="fab fa-facebook-f fa-2x"></i></a></li>
+              <li><a href="#"><i class="fab fa-instagram fa-2x "></i></a></li>
+              <li><a href="#"><i class="fab fa-linkedin-in fa-2x "></i></a></li>
+              <li><a href="#"><i class="fab fa-github fa-2x "></i></a></li>
             </ul>
           </div>
         </div>
@@ -441,10 +394,10 @@
               <p>TECHNICAL HEAD,UCD</p>
             </div>
             <ul class="social">
-              <li><a href="#"><i class="fab fa-facebook-f fa-2x text-primary"></i></a></li>
-              <li><a href="#"><i class="fab fa-instagram fa-2x text-danger"></i></a></li>
-              <li><a href="#"><i class="fab fa-linkedin-in fa-2x text-success"></i></a></li>
-              <li><a href="#"><i class="fab fa-github fa-2x text-warning"></i></a></li>
+              <li><a href="#"><i class="fab fa-facebook-f fa-2x"></i></a></li>
+              <li><a href="#"><i class="fab fa-instagram fa-2x "></i></a></li>
+              <li><a href="#"><i class="fab fa-linkedin-in fa-2x "></i></a></li>
+              <li><a href="#"><i class="fab fa-github fa-2x "></i></a></li>
             </ul>
           </div>
         </div>
@@ -458,10 +411,10 @@
               <p>PHOTOGRAPHY HEAD,UCD</p>
             </div>
             <ul class="social">
-              <li><a href="#"><i class="fab fa-facebook-f fa-2x text-primary"></i></a></li>
-              <li><a href="#"><i class="fab fa-instagram fa-2x text-danger"></i></a></li>
-              <li><a href="#"><i class="fab fa-linkedin-in fa-2x text-success"></i></a></li>
-              <li><a href="#"><i class="fab fa-github fa-2x text-warning"></i></a></li>
+              <li><a href="#"><i class="fab fa-facebook-f fa-2x"></i></a></li>
+              <li><a href="#"><i class="fab fa-instagram fa-2x "></i></a></li>
+              <li><a href="#"><i class="fab fa-linkedin-in fa-2x "></i></a></li>
+              <li><a href="#"><i class="fab fa-github fa-2x "></i></a></li>
             </ul>
           </div>
         </div>
@@ -475,10 +428,10 @@
               <p>EVENTS HEAD,UCD</p>
             </div>
             <ul class="social">
-              <li><a href="#"><i class="fab fa-facebook-f fa-2x text-primary"></i></a></li>
-              <li><a href="#"><i class="fab fa-instagram fa-2x text-danger"></i></a></li>
-              <li><a href="#"><i class="fab fa-linkedin-in fa-2x text-success"></i></a></li>
-              <li><a href="#"><i class="fab fa-github fa-2x text-warning"></i></a></li>
+              <li><a href="#"><i class="fab fa-facebook-f fa-2x"></i></a></li>
+              <li><a href="#"><i class="fab fa-instagram fa-2x "></i></a></li>
+              <li><a href="#"><i class="fab fa-linkedin-in fa-2x "></i></a></li>
+              <li><a href="#"><i class="fab fa-github fa-2x "></i></a></li>
             </ul>
           </div>
         </div>
@@ -492,10 +445,10 @@
               <p>CSR HEAD,UCD</p>
             </div>
             <ul class="social">
-              <li><a href="#"><i class="fab fa-facebook-f fa-2x text-primary"></i></a></li>
-              <li><a href="#"><i class="fab fa-instagram fa-2x text-danger"></i></a></li>
-              <li><a href="#"><i class="fab fa-linkedin-in fa-2x text-success"></i></a></li>
-              <li><a href="#"><i class="fab fa-github fa-2x text-warning"></i></a></li>
+              <li><a href="#"><i class="fab fa-facebook-f fa-2x"></i></a></li>
+              <li><a href="#"><i class="fab fa-instagram fa-2x "></i></a></li>
+              <li><a href="#"><i class="fab fa-linkedin-in fa-2x "></i></a></li>
+              <li><a href="#"><i class="fab fa-github fa-2x "></i></a></li>
             </ul>
           </div>
         </div>
@@ -509,10 +462,10 @@
               <p>DESIGN HEAD,UCD</p>
             </div>
             <ul class="social">
-              <li><a href="#"><i class="fab fa-facebook-f fa-2x text-primary"></i></a></li>
-              <li><a href="#"><i class="fab fa-instagram fa-2x text-danger"></i></a></li>
-              <li><a href="#"><i class="fab fa-linkedin-in fa-2x text-success"></i></a></li>
-              <li><a href="#"><i class="fab fa-github fa-2x text-warning"></i></a></li>
+              <li><a href="#"><i class="fab fa-facebook-f fa-2x"></i></a></li>
+              <li><a href="#"><i class="fab fa-instagram fa-2x "></i></a></li>
+              <li><a href="#"><i class="fab fa-linkedin-in fa-2x "></i></a></li>
+              <li><a href="#"><i class="fab fa-github fa-2x "></i></a></li>
             </ul>
           </div>
         </div>
@@ -527,10 +480,10 @@
               <p>ASSOCIATE EVENTS HEAD ,UCD</p>
             </div>
             <ul class="social">
-              <li><a href="#"><i class="fab fa-facebook-f fa-2x text-primary"></i></a></li>
-              <li><a href="#"><i class="fab fa-instagram fa-2x text-danger"></i></a></li>
-              <li><a href="#"><i class="fab fa-linkedin-in fa-2x text-success"></i></a></li>
-              <li><a href="#"><i class="fab fa-github fa-2x text-warning"></i></a></li>
+              <li><a href="#"><i class="fab fa-facebook-f fa-2x"></i></a></li>
+              <li><a href="#"><i class="fab fa-instagram fa-2x "></i></a></li>
+              <li><a href="#"><i class="fab fa-linkedin-in fa-2x "></i></a></li>
+              <li><a href="#"><i class="fab fa-github fa-2x "></i></a></li>
             </ul>
           </div>
         </div>
@@ -544,10 +497,10 @@
               <p>ASSOCIATE DESIGN HEAD,UCD</p>
             </div>
             <ul class="social">
-              <li><a href="#"><i class="fab fa-facebook-f fa-2x text-primary"></i></a></li>
-              <li><a href="#"><i class="fab fa-instagram fa-2x text-danger"></i></a></li>
-              <li><a href="#"><i class="fab fa-linkedin-in fa-2x text-success"></i></a></li>
-              <li><a href="#"><i class="fab fa-github fa-2x text-warning"></i></a></li>
+              <li><a href="#"><i class="fab fa-facebook-f fa-2x"></i></a></li>
+              <li><a href="#"><i class="fab fa-instagram fa-2x "></i></a></li>
+              <li><a href="#"><i class="fab fa-linkedin-in fa-2x "></i></a></li>
+              <li><a href="#"><i class="fab fa-github fa-2x "></i></a></li>
             </ul>
           </div>
         </div>
@@ -561,21 +514,39 @@
               <p>ASSOCIATE EDITORIAL HEAD,UCD</p>
             </div>
             <ul class="social">
-              <li><a href="#"><i class="fab fa-facebook-f fa-2x text-primary"></i></a></li>
-              <li><a href="#"><i class="fab fa-instagram fa-2x text-danger"></i></a></li>
-              <li><a href="#"><i class="fab fa-linkedin-in fa-2x text-success"></i></a></li>
-              <li><a href="#"><i class="fab fa-github fa-2x text-warning"></i></a></li>
+              <li><a href="#"><i class="fab fa-facebook-f fa-2x"></i></a></li>
+              <li><a href="#"><i class="fab fa-instagram fa-2x "></i></a></li>
+              <li><a href="#"><i class="fab fa-linkedin-in fa-2x "></i></a></li>
+              <li><a href="#"><i class="fab fa-github fa-2x "></i></a></li>
             </ul>
           </div>
         </div>
-
+</div>
       </div>
     </div>
     </section>
-    <script src="js/particles.js"></script>
-    <script src="js/app.js"></script>
+    <script>
+    const header = document.querySelector('.main-header');
 
-    <script src="js/ok/stats.js"></script>
+    window.addEventListener('scroll', () => {
+        const scrollPos = window.scrollY;
+        if (scrollPos > 10 ) {
+            header.classList.add('scrolled');
+        }
+        else {
+            header.classList.remove('scrolled');
+        }
+    });</script>
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <script src="js/jquery-migrate-3.0.0.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/jquery.waypoints.min.js"></script>
+        <script src="js/jquery.stellar.min.js"></script>
+        <script src="js/jquery.animateNumber.min.js"></script>
+
+        <script src="js/main.js"></script>
 </body>
 
 </html>
