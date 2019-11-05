@@ -30,66 +30,51 @@
 
   <!-- Theme Style -->
   <link rel="stylesheet" href="css/style.css">
+  <style>
+  #particles-js{
+    height:100vh;
+    }</style>
 </head>
-<script>
-$(document).ready(function(){
-  $(window).scroll(function(){
-  	var scroll = $(window).scrollTop();
-	  if (scroll > 500) {
-	    $("#navscroll").css("background" , "	rgba(255,255,255,0.8)");
-	  }
 
-
-	  else{
-		  $("#navscroll").css("background" , "rgba(255,255,255,0.5)");
-	  }
-  })
-})
-</script>
 
 <body>
+  <header class="main-header " style="">
+       <div class="logo">
+ <a href="#" style="font-size:1.5em;padding:0px;"><img src="img/logo.png" style="padding-right:8px;padding-bottom:2px" width="50px">UCD</a>
+       </div>
 
-  <header role="banner" class="overlay11">
+       <input type="checkbox" class="menu-btn" id="menu-btn">
+       <label for="menu-btn" class="menu-icon">
+         <span class="menu-icon__line"></span>
+       </label>
 
-    <nav class="navbar navbar-expand-lg fixed-top " id="navscroll">
-      <div class="container">
-        <a class="navbar-brand absolute" href="index.html"><img src="img/logo.png" class="img-fluid" width="80px"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+       <ul class="nav-links">
+         <li class="nav-link">
+           <a href="#">Home</a>
+         </li>
+         <li class="nav-link">
+           <a href="#">About</a>
+         </li>
+         <li class="nav-link">
+           <a href="#">Events</a>
+         </li>
+         <li class="nav-link">
+           <a href="#">Gallery</a>
+         </li>
+         <li class="nav-link">
+           <a href="#">Blog</a>
+         </li>
+         <li class="nav-link">
+           <a href="team.html">Team</a>
+         </li>
+         <li class="nav-link">
+           <a href="contact.html">Contact us</a>
+         </li>
+       </ul>
+     </header>
+     <div id="particles-js"></div>
 
-        <div class=" collapse navbar-collapse navbar-light" id="nav">
-          <ul class="navbar-nav mx-auto">
-            <li class="nav-item">
-              <a id="aa" class="text-success" href="#"><b>Home</b></a>
-            </li>
-            <li class="nav-item">
-              <a id="aa" class="text-success" href="#"><b>About</b></a>
-            </li>
-            <li class="nav-item">
-              <a id="aa"class="text-success" href="team.html
-              "><b>Team</b></a>
-            </li>
-            <li class="nav-item">
-              <a id="aa" class="text-success"href="#"><b>Gallery</b></a>
-            </li>
-            <li class="nav-item">
-              <a id="aa" class="text-danger" href="#"><b>Contact Us</b></a>
-            </li>
-          </ul>
-          <ul class="navbar-nav absolute-right">
-            <li>
-              <a href="login.html" class="text-primary"><b>Login</b></a> <b>/</b> <a href="register.html" class="text-primary"><b>Register</B></a>
-            </li>
-          </ul>
-
-        </div>
-
-      </div>
-
-
-    </nav>
-</div>
+<!--<center>
   <video autoplay muted loop id="myVideo">
     <source src="ucd.mp4" type="video/mp4">
   </video>
@@ -97,6 +82,7 @@ $(document).ready(function(){
 
 </center>
   <!-- END header -->
+
 
   <section class="site-section element-animate">
     <div class="container">
@@ -113,7 +99,7 @@ $(document).ready(function(){
 
           <div class="block-15">
 
-            <p class="display-3"><span class="text-primary">U</span><span class="text-success">C</span><span class="text-danger">D</span></p>
+            <p class="display-3"><span style="color:rgba(0,9,28,0.9)">UCD</span></p>
 
             <div class="text mb-5">
               <p>
@@ -121,8 +107,16 @@ $(document).ready(function(){
                 learn new things everyday.This is an initiative taken by computer application department to promote Technical activities.
               </p>
             </div>
-            <p><a href="#" class="btn btn-primary reverse py-2 px-4 bg-warning">Read More</a></p>
-
+            <div class="button-container button-flip-horizontal">
+  		        <div class="flipper flipper-flip-horizontal">
+  		            <div class="button front"style="color:#fff">
+<center><i class="fas fa-angle-double-right fa-2x"></i></center>
+  		            </div>
+  		            <div class="button back">
+  		              <center>Read more</center>
+  		            </div>
+  		        </div>
+  		    </div>
           </div>
 
         </div>
@@ -131,7 +125,7 @@ $(document).ready(function(){
 
     </div>
   </section>
-  <!-- END section -->
+
 
   <center>
     <section class=" element-animate" id="cca">
@@ -140,9 +134,7 @@ $(document).ready(function(){
           <div class="row">
             <div class="col-lg-12">
               <center>
-                <p class="display-4">Why <span class="text-primary">we</span>
-                  <span class="text-danger">r</span>
-                  <spam class="text-success">different</span><span class="text-warning"> ?</span>
+                <p class="display-4">Why we are  different ?
                 </p><br>
                 <br>
               </center>
@@ -150,46 +142,51 @@ $(document).ready(function(){
 
             <div class="col-md-6 col-lg-3">
               <div class="media block-6 d-block le3" id="leto" style=""  data-wow-delay="100ms">
-                <div class="icon mb-3"><i class="fas fa-place-of-worship fa-3x text-danger"></i></div>
+                <div class="icon mb-3"><img src="img/workshop.svg" width="60px"></div>
                 <div class="media-body">
-                  <h3 class="heading text-danger"> Workshops</h3>
-                  <p>We organize workshop according to the latest trends in the market and try to make them as interactive as possible. We want to make an environment
-                    where our members can learn new things easily .</p>
+                  <h3 class="heading "> Workshops</h3>
+                  <p>Workshops are an integral part of learning. They teach us something outside the theoretical
+boundaries of our books. To bring this important experience to our students, UCD constantly
+conducts workshops in the latest fields possible and gives its members the best learning experience.</p>
                   <!--  <p><a href="#" class="more">Read More <span class="ion-arrow-right-c"></span></a></p>-->
                 </div>
               </div>
             </div>
             <div class="col-md-6 col-lg-3">
               <div class="media block-6 d-block le2" id="leto" style="" data-wow-delay="100ms">
-                <div class="icon mb-3"><i class="fas fa-briefcase fa-3x text-primary"></i></div>
-                <div class="media-body">
-                  <h3 class="heading text-primary"> Work Environment</h3>
-                  <p> We here at UCD try to create an efficient work environment that helps our members to grow in a professional manner and incense their skills
-                    which matters the most to us.</p>
+                <div class="icon mb-3"><img src="img/work.svg" width="60px"></div>
+                 <div class="media-body">
+                  <h3 class="heading "> Work Environment</h3>
+                  <p> The work environment of UCD can be summed up in two words ‘Exciting’ and ‘Collaborative’. Every
+task in UCD is not a challenge but just a activity which we perform with utmost
+excitement. We try to envelope the  students so as to get them
+ready for their future ahead.</p>
                   <!--  <p><a href="#" class="more">Read More <span class="ion-arrow-right-c"></span></a></p>-->
                 </div>
               </div>
             </div>
 
             <div class="col-md-6 col-lg-3">
-              <div class="media block-6 d-block le1" id="leto"  data-wow-delay="300ms">
-                <div class="icon mb-3"><i class="far fa-smile-wink fa-3x text-warning"></i></div>
+              <div class="media block-6 d-block " id="leto"  data-wow-delay="300ms">
+                <div class="icon mb-3"><img src="img/funday.svg" width="60px"></div>
                 <div class="media-body">
-                  <h3 class="heading text-warning">FunDay</h3>
-                  <p> We organise many fun events as every thing is important in life
-                    and this is one of the main reason of this student chapter to make a balanced environment for better understanding
-                    and good growth.</p>
+                  <h3 class="heading">FunDay</h3>
+                  <p>By now you might think that UCD is all about studies and concerns itself with only strengthening
+technical base of students. Well, that is not the case. We believe that everyone is unique and equally
+talented in their own way. So, we decided that in every 15 days a special event</p>
                   <!--  <p><a href="#" class="more">Read More <span class="ion-arrow-right-c"></span></a></p>-->
                 </div>
               </div>
             </div>
             <div class="col-md-6 col-lg-3">
-              <div class="media block-6 d-block le4" id="leto" style="" data-wow-delay="300ms">
-                <div class="icon mb-3"><i class="fas fa-users-cog fa-3x text-success"></i></span></div>
+              <div class="media block-6 d-block " id="leto"  data-wow-delay="300ms">
+                <div class="icon mb-3"><img src="img/manage.svg" width="60px"></span></div>
                 <div class="media-body">
-                  <h3 class="heading text-success "> Team Managment</h3>
-                  <p>We at UCD try to inhence managment skills and PR skills along with Technical skills because they are a major part of anybodys life and some times these skills
-                    are even more important then Technical skills.</p>
+                  <h3 class="heading "> Team Managment</h3>
+                  <p> UCD can help you bring those social skills to the finest stature for your
+best performance possible. Speaking, leadership, team management etc. are some of the important
+aspects of working a corporate life. We know the importance of these  traits and will bring
+you the best possible ways.</p>
                   <!--<p><a href="#" class="more">Read More <span class="ion-arrow-right-c"></span></a></p>-->
                 </div>
               </div>
@@ -197,361 +194,122 @@ $(document).ready(function(){
           </div>
         </div>
     </section>
-    <section id="counter-stats" class="wow fadeInRight" data-wow-duration="1.4s">
-    	<div class="container" id="shadoww">
-    		<div class="row">
-
-    			<div class="col-lg-3 stats text-primary">
-    				<i class="fa fa-code text-primary" aria-hidden="true"></i>
-    				<div class="counting" data-count="10000">0</div>
-    				<h5>Coded lines</h5>
-    			</div>
-
-    			<div class="col-lg-3 stats text-danger">
-    				<i class="fa fa-check text-danger" aria-hidden="true"></i>
-    				<div class="counting" data-count="280">0</div>
-    				<h5>Projects done</h5>
-    			</div>
-
-    			<div class="col-lg-3 stats text-success">
-    				<i class="fa fa-user text-success" aria-hidden="true"></i>
-    				<div class="counting" >	&#8734;</div>
-    				<h5>Happy clients</h5>
-    			</div>
-
-    			<div class="col-lg-3 stats text-warning">
-    				<i class="fa fa-coffee text-warning" aria-hidden="true"></i>
-    				<div class="counting" data-count="999">0</div>
-    				<h5>Cups of coffee</h5>
-    			</div>
 
 
-    		</div>
-    		<!-- end row -->
-    	</div>
-    	<!-- end container -->
-</div></div>
-    </section>
-
-
-<section >
-<center><span class="display-2">Our Committees</span></center>
-  <div class="row comm">
-    <div class="col-lg-4 col-md-12" >
-      <div class="gradient-box">
-<center> <div><i class="fas fa-terminal fa-5x text-primary"></i></div>
-<h3 class="text-primary">  Technical committee</h3></center>
-<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If
-</p>  </div>
-    </div>
-    <div class="col-lg-4 col-md-12" >
-      <div class="gradient-box">
-<center><div><i class="far fa-newspaper fa-5x text-danger"></i></div>
-  <h3 class="text-danger">Editorial committee</h3></center>
-<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If </p>
-      </div>
-    </div>
-    <div class="col-lg-4 col-md-12" >
-      <div class="gradient-box">
-<center><div><i class="fas fa-pencil-ruler fa-5x text-warning"></i></div>
-  <h3 class="text-warning">Design committee</h3></center>
-<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If
-  </p>
-      </div>
-    </div>
-    <div class="col-lg-4 col-md-12" >
-      <div class="gradient-box">
-<center><div><i class="fas fa-camera-retro fa-5x text-success"></i></div>
-  <h3 class="text-success">Photography committee</h3></center>
-<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If
-  </p>
-      </div>
-    </div>
-    <div class="col-lg-4 col-md-12" >
-      <div class="gradient-box">
-      <center><div><i class="fas fa-handshake fa-5x text-warning"></i></div>
-<h3 class="text-warning">PR Committee</h3></center>
-<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If
-  </p>
-      </div>
-    </div>
-    <div class="col-lg-4 col-md-12" >
-  <div class="gradient-box">
-<center><div><i class="fas fa-calendar-week fa-5x text-primary"></i></div>
-  <h3 class="text-primary">Event committee</h3></center>
-<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If
-  </p>
-      </div>
-    </div>
-
-</div></section>
-    <!-- END section -->
-<!--
-    <div class="site-section bg-light">
-      <div class="container">
-        <div class="row justify-content-center mb-5 element-animate">
+    <div class="container site-section element-animate">
+      <div class="row justify-content-center mb-5 element-animate">
           <div class="col-md-7 text-center section-heading">
-            <h2 class="text-primary heading">Popular Courses</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit qui neque sint eveniet tempore sapiente.</p>
-            <p><a href="#" class="btn btn-primary py-2 px-4"><span class="ion-ios-book mr-2"></span>Enroll Now</a></p>
+            <h1 class=" heading" style="">Our Committees</h1>
           </div>
         </div>
-      </div>
-      <div class="container-fluid block-11 element-animate">
-        <div class="nonloop-block-11 owl-carousel">
-          <div class="item">
-            <div class="block-19">
-              <figure>
-                <img src="images/img_1.jpg" alt="Image" class="img-fluid">
-              </figure>
-              <div class="text">
-                <h2 class="heading"><a href="#">Advanced JavaScript Learning</a></h2>
-                <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit qui neque sint eveniet tempore sapiente.</p>
-                <div class="meta d-flex align-items-center">
-                  <div class="number">
-                    <span>2,219/6,000</span>
-                  </div>
-                  <div class="price text-right"><del class="mr-3">$23</del><span>Free</span></div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="item">
-            <div class="block-19">
-              <figure>
-                <img src="images/img_3.jpg" alt="Image" class="img-fluid">
-              </figure>
-              <div class="text">
-                <h2 class="heading"><a href="#">Advanced JavaScript Learning</a></h2>
-                <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit qui neque sint eveniet tempore sapiente.</p>
-                <div class="meta d-flex align-items-center">
-                  <div class="number">
-                    <span>2,219/6,000</span>
-                  </div>
-                  <div class="price text-right"><del class="mr-3">$23</del><span>Free</span></div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="item">
-            <div class="block-19">
-              <figure>
-                <img src="images/img_2.jpg" alt="Image" class="img-fluid">
-              </figure>
-              <div class="text">
-                <h2 class="heading"><a href="#">Introduction to CSS</a></h2>
-                <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit qui neque sint eveniet tempore sapiente.</p>
-                <div class="meta d-flex align-items-center">
-                  <div class="number">
-                    <span>1,903/3,000</span>
-                  </div>
-                  <div class="price text-right"><span>$10.99</span></div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="item">
-            <div class="block-19">
-              <figure>
-                <img src="images/img_1.jpg" alt="Image" class="img-fluid">
-              </figure>
-              <div class="text">
-                <h2 class="heading"><a href="#">Design &amp; Develop</a></h2>
-                <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit qui neque sint eveniet tempore sapiente.</p>
-                <div class="meta d-flex align-items-center">
-                  <div class="number">
-                    <span>23/100</span>
-                  </div>
-                  <div class="price text-right"><del class="mr-3">$23</del><span>Free</span></div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="item">
-            <div class="block-19">
-              <figure>
-                <img src="images/img_1.jpg" alt="Image" class="img-fluid">
-              </figure>
-              <div class="text">
-                <h2 class="heading"><a href="#">Advanced JavaScript Learning</a></h2>
-                <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit qui neque sint eveniet tempore sapiente.</p>
-                <div class="meta d-flex align-items-center">
-                  <div class="number">
-                    <span>2,219/6,000</span>
-                  </div>
-                  <div class="price text-right"><del class="mr-3">$23</del><span>Free</span></div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="item">
-            <div class="block-19">
-              <figure>
-                <img src="images/img_3.jpg" alt="Image" class="img-fluid">
-              </figure>
-              <div class="text">
-                <h2 class="heading"><a href="#">Advanced JavaScript Learning</a></h2>
-                <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit qui neque sint eveniet tempore sapiente.</p>
-                <div class="meta d-flex align-items-center">
-                  <div class="number">
-                    <span>2,219/6,000</span>
-                  </div>
-                  <div class="price text-right"><del class="mr-3">$23</del><span>Free</span></div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="item">
-            <div class="block-19">
-              <figure>
-                <img src="images/img_2.jpg" alt="Image" class="img-fluid">
-              </figure>
-              <div class="text">
-                <h2 class="heading"><a href="#">Introduction to CSS</a></h2>
-                <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit qui neque sint eveniet tempore sapiente.</p>
-                <div class="meta d-flex align-items-center">
-                  <div class="number">
-                    <span>1,903/3,000</span>
-                  </div>
-                  <div class="price text-right"><span>$10.99</span></div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="item">
-            <div class="block-19">
-              <figure>
-                <img src="images/img_1.jpg" alt="Image" class="img-fluid">
-              </figure>
-              <div class="text">
-                <h2 class="heading"><a href="#">Design &amp; Develop</a></h2>
-                <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit qui neque sint eveniet tempore sapiente.</p>
-                <div class="meta d-flex align-items-center">
-                  <div class="number">
-                    <span>23/100</span>
-                  </div>
-                  <div class="price text-right"><del class="mr-3">$23</del><span>Free</span></div>
-                </div>
-              </div>
-            </div>
-          </div>
-
+      <div class="block-3 d-md-flex pt-5" style=" background-image: linear-gradient(#01c2f3,#00091c);border-radius:30px 30px 0px 0px;box-shadow: 3px 3px 55px -16px rgba(0,0,0,0.75);">
+        <div class="image" >
+        <img src="img/tegh.svg"width="200px"></div>
+        <div class="text">
+          <h3 class="heading1">Technical Committee</h3>
+          <p>This committee involves people who are good in coding, designing and handling the official website, Instagram, Twitter, Facebook page and really good with computers. They are also responsible for hosting all the technical events.</p>
         </div>
       </div>
+      <div class="block-3 d-md-flex" style="background-image: linear-gradient(#00091c,#01c2f3);box-shadow: 3px 3px 55px -16px rgba(0,0,0,0.75);">
+        <div class="image order-2">
+          <img src="img/design.svg" width="200px"></div>
+        <div class="text order-1">
+          <h3 class="heading">Designing Committee</h3>
+          <p>     This committee involves people who are good in designing and editing of pictures irrespective of which software they work on. They are responsible for designing of posters, banners of the various events and fest held throughout the year.
+</p>
+        </div>
+      </div>
+      <div class="block-3 d-md-flex" style=" background-image: linear-gradient(#01c2f3,#00091c);box-shadow: 3px 3px 55px -16px rgba(0,0,0,0.75);">
+        <div class="image" >
+          <img src="img/edit.svg" width="200px"></div>
+        <div class="text">
+          <h3 class="heading1">Editorial Committee</h3>
+          <p>       This committee includes people who are well versed with words and good in article writing, describing the various events held, designing and formatting of the magazine, etc. They are committed to offering readers a mix of newsworthy, engaging, and thought-provoking articles about the Club.
+</p>
+        </div>
+      </div>
+      <div class="block-3 d-md-flex" style="background-image: linear-gradient(#00091c,#01c2f3);box-shadow: 3px 3px 55px -16px rgba(0,0,0,0.75);">
+        <div class="image order-2">
+          <img src="img/cam.svg" width="200px"></div>
+        <div class="text order-1">
+          <h3 class="heading">Photography  Committee</h3>
+          <p>This committee involves people who are responsible for capturing and archiving photographic memories of various events of our club. This involves people who are good with creativity and have to click photographs of the various events held from time to time.</p>
+        </div>
+      </div>
+      <div class="block-3 d-md-flex" style="background-image: linear-gradient(#01c2f3,#00091c);box-shadow: 3px 3px 55px -16px rgba(0,0,0,0.75);">
+        <div class="image" >
+          <img src="img/event.svg" width="200px"></div>
+        <div class="text">
+          <h3 class="heading1">Event Committee</h3>
+          <p>     This committee involves people who heave a creative mind and good in management. They are responsible for bringing up new ideas for new events. They will also be looking after all the requirements for an event to be successful. They are responsible for the overall development and management of the Event including recruiting exhibitors and sponsors, and promotions.
 
-
+</p>
+        </div>
+      </div>
+      <div class="block-3 d-md-flex" style="background-image: linear-gradient(#00091c,#01c2f3);border-radius:0px 0px 30px 30px;box-shadow: 3px 3px 55px -16px rgba(0,0,0,0.75);">
+        <div class="image order-2">
+          <img src="img/pr.svg" width="200px"></div>
+        <div class="text order-1">
+          <h3 class="heading">Public Relation Committee </h3>
+          <p>This committee people who are good in making new connections. They are responsible for bringing sponsorships for the various events and the promotions of the events happening in the college. They will also be responsible for helping out others with their doubts about our club.</p>
+        </div>
+      </div>
     </div>
-    <!-- END section-->
+    <section id="counter-stats" class="wow fadeInRight" data-wow-duration="1.4s">
+      <div class="container" id="shadoww" style="padding:6px;">
+        <div class="row">
+
+          <div class="col-lg-3 stats " style="border-bottom:4px solid #01c2f3;">
+            <img src="img/code.svg" width="80px">
+            <div class="counting" data-count="10000">0</div>
+            <h5>Coded lines</h5>
+          </div>
+
+          <div class="col-lg-3 stats"  style="border-bottom:4px solid #01c2f3;">
+            <img src="img/project.svg" width="80px">
+            <div class="counting" data-count="280">0</div>
+            <h5>Projects done</h5>
+          </div>
+
+          <div class="col-lg-3 stats "  style="border-bottom:4px solid #01c2f3;">
+          <img src="img/members.svg" width="80px">
+            <div class="counting" >	&#8734;</div>
+            <h5>Happy clients</h5>
+          </div>
+
+          <div class="col-lg-3 stats "  style="border-bottom:4px solid #01c2f3;">
+            <img src="img/coffee.svg" width="80px">
+            <div class="counting" data-count="999">0</div>
+            <h5>Cups of coffee</h5>
+          </div>
 
 
-    <footer class="site-footer">
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
-            <h3>University</h3>
-            <p>Perferendis eum illum voluptatibus dolore tempora consequatur minus asperiores temporibus.</p>
-          </div>
-          <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
-            <h3 class="heading">Quick Link</h3>
-            <div class="row">
-              <div class="col-md-6">
-                <ul class="list-unstyled">
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">About Us</a></li>
-                  <li><a href="#">Courses</a></li>
-                  <li><a href="#">Pages</a></li>
-                </ul>
-              </div>
-              <div class="col-md-6">
-                <ul class="list-unstyled">
-                  <li><a href="#">News</a></li>
-                  <li><a href="#">Support</a></li>
-                  <li><a href="#">Contact</a></li>
-                  <li><a href="#">Privacy</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
-            <h3 class="heading">Blog</h3>
-            <div class="block-21 d-flex mb-4">
-              <div class="text">
-                <h3 class="heading mb-0"><a href="#">Consectetur Adipisicing Elit</a></h3>
-                <div class="meta">
-                  <div><a href="#"><span class="ion-android-calendar"></span> May 29, 2018</a></div>
-                  <div><a href="#"><span class="ion-android-person"></span> Admin</a></div>
-                  <div><a href="#"><span class="ion-chatbubble"></span> 19</a></div>
-                </div>
-              </div>
-            </div>
-            <div class="block-21 d-flex mb-4">
-              <div class="text">
-                <h3 class="heading mb-0"><a href="#">Dolore Tempora Consequatur</a></h3>
-                <div class="meta">
-                  <div><a href="#"><span class="ion-android-calendar"></span> May 29, 2018</a></div>
-                  <div><a href="#"><span class="ion-android-person"></span> Admin</a></div>
-                  <div><a href="#"><span class="ion-chatbubble"></span> 19</a></div>
-                </div>
-              </div>
-            </div>
-            <div class="block-21 d-flex mb-4">
-              <div class="text">
-                <h3 class="heading mb-0"><a href="#">Perferendis eum illum</a></h3>
-                <div class="meta">
-                  <div><a href="#"><span class="ion-android-calendar"></span> May 29, 2018</a></div>
-                  <div><a href="#"><span class="ion-android-person"></span> Admin</a></div>
-                  <div><a href="#"><span class="ion-chatbubble"></span> 19</a></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
-            <h3 class="heading">Contact Information</h3>
-            <div class="block-23">
-              <ul>
-                <li><span class="icon ion-android-pin"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
-                <li><a href="#"><span class="icon ion-ios-telephone"></span><span class="text">+2 392 3929 210</span></a></li>
-                <li><a href="#"><span class="icon ion-android-mail"></span><span class="text">info@yourdomain.com</span></a></li>
-                <li><span class="icon ion-android-time"></span><span class="text">Monday &mdash; Friday 8:00am - 5:00pm</span></li>
-              </ul>
-            </div>
-          </div>
         </div>
-        <div class="row pt-5">
-          <div class="col-md-12 text-center copyright">
-
-            <p class="float-md-left">
-              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-              Copyright &copy;<script>
-                document.write(new Date().getFullYear());
-              </script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i>
-              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            </p>
-            <p class="float-md-right">
-              <a href="#" class="fa fa-facebook p-2"></a>
-              <a href="#" class="fa fa-twitter p-2"></a>
-              <a href="#" class="fa fa-linkedin p-2"></a>
-              <a href="#" class="fa fa-instagram p-2"></a>
-
-            </p>
-          </div>
-        </div>
+        <!-- end row -->
       </div>
-    </footer>
-    <!-- END footer -->
+      <!-- end container -->
+  </div></div>
+    </section>
+    <!-- END section -->
+    <div class='subscribe'>
+        <div class='subscribe__image'>
+          <img src="img/email.svg"width="200px" class="img-fluid">
+        </div>
+        <div class='subscribe__text'>
+          <p class='heading'>Stay tuned</p>
+          <p class='subheading'>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+        </div>
+        <form class='form' id='form'>
+          <input class='subscribe__input input' type='text' placeholder='Enter your email'pattern="[a-z0-9._%+-]+@(gmail|ymail|yahoo|hotmail|outlook|googlemail|mac)+\.(com|co.in|in|org|net)$" required>
+          <input class='subscribe__btn btn' type='submit' value='Subscribe'>
+        </form>
+      </div>
 
-    <!-- loader --
+
+    <!-- loader -->
   <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
       <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
       <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214" /></svg></div>
--->
 <script>
 
 $('.counting').each(function() {
@@ -577,6 +335,37 @@ $('.counting').each(function() {
   });
 
 
+});
+function togglesidebar(){
+  document.getElementById("sidebar").classList.toggle("active");
+} const header = document.querySelector('.main-header');
+
+window.addEventListener('scroll', () => {
+    const scrollPos = window.scrollY;
+    if (scrollPos > 10 ) {
+        header.classList.add('scrolled');
+    }
+    else {
+        header.classList.remove('scrolled');
+    }
+});const form = document.getElementById('form');
+const formInput = document.querySelector('.subscribe__input');
+const formBtn = document.querySelector('.subscribe__btn');
+const subscribeImg = document.querySelector('.subscribe__image');
+
+formInput.addEventListener('input', () => {
+  formInput.checkValidity() ? formBtn.classList.add('btn--active') : formBtn.classList.remove('btn--active');
+});
+
+form.addEventListener('submit', e => {
+  e.preventDefault();
+
+  subscribeImg.classList.add('subscribe__image--success');
+  formBtn.classList.add('btn--success');
+  formBtn.value = "You're on the list! 👍";
+
+  formInput.disabled = true;
+  formBtn.disabled = true;
 });</script>
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/jquery-migrate-3.0.0.js"></script>
@@ -586,7 +375,9 @@ $('.counting').each(function() {
     <script src="js/jquery.waypoints.min.js"></script>
     <script src="js/jquery.stellar.min.js"></script>
     <script src="js/jquery.animateNumber.min.js"></script>
-
+    <script src="js/particles.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/ok/stats.js"></script>
     <script src="js/jquery.magnific-popup.min.js"></script>
 
     <script src="js/main.js"></script>

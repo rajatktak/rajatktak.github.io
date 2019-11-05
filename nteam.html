@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+    <title>UPES-UCD</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="img/logo.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+  <!--<script src="https://kit.fontawesome.com/2e68aa35d9.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet">-->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+
+
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+
+    /* ELEMENT */
+
+    .card-flip {
+      margin: 20px auto;
+      cursor: pointer;
+      perspective: 1000px;
+      width: 300px;
+    }
+
+    .card-flip__flipper {
+      transition: .3s ease;
+      transform-style: preserve-3d;
+      position: relative;
+    }
+
+    .card-flip__content {
+      width: 100%;
+      backface-visibility: hidden;
+      position: absolute;
+      overflow: hidden;
+    }
+
+    .fancy-hover__image {
+      display: block;
+      width: 100%;
+      transition: filter .15s linear .15s;
+    }
+
+    .fancy-hover__fancy {
+      position: absolute;
+      top: 0;
+      background-color: rgba(55,66,78,0);
+      width: 100%;
+      border-radius: 20px;
+      height: 100%;
+      transition: background .15s linear .15s
+    }
+
+    .fancy-hover__fancy:after {
+      content: '';
+      background: white;
+      height: 1px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      right: 50%;
+      transition: left .15s ease-in-out, right .15s ease-in-out;
+    }
+
+
+    .fancy-hover__element {
+      width: 100%;
+      position: absolute;
+    }
+
+    .fancy-hover__element--title {
+      background: rgba(0,0,0,.5);
+      bottom: 0;
+      text-transform: uppercase;
+      font-family: sans-serif;
+      padding:0px;
+      transition: bottom .15s ease-in-out .15s, background .15s linear .15s;
+    }
+    .fancy-hover__element--subtitle {
+      top: 100%;
+      font-family: sans-serif;
+      transition: top .15s ease-out;
+    }
+    .fancy-hover:hover .fancy-hover__image {
+      filter: blur(2px);
+      transition-delay: 0s;
+    }
+    .fancy-hover:hover .fancy-hover__fancy {
+      background: rgba(0,0,0,.5);
+      transition-delay: 0s;
+    }
+
+    .fancy-hover:hover .fancy-hover__fancy:after {
+      left: 20%;
+      right: 20%;
+      transition-delay: .15s;
+    }
+
+    .fancy-hover:hover .fancy-hover__element--title {
+      bottom: 50%;
+      background: rgba(0,0,0,0);
+      transition-delay: 0s;
+    }
+
+    .fancy-hover:hover .fancy-hover__element--subtitle {
+      top: 50%;
+      transition: top .15s ease-in .15s;
+    }
+
+    .card-flip__content--front {
+      transform: rotateY(0deg);
+      z-index: 2;
+    }
+
+    .card-flip__content--back {
+      background: rgb(44,44,44);
+      font-family: sans-serif;
+      color: white;
+      text-align: center;
+      padding: 16px;
+      height: 450px;
+      transform: rotateY(180deg);
+    }
+
+    .card-flip.clicked .card-flip__flipper {
+      transform: rotateY(180deg);
+    }
+    </style>
+  </head>
+  <body>
+    <figure class="card-flip fancy-hover">
+  <div class="card-flip__flipper">
+    <!-- FRONT SIDE -->
+    <figure class="card-flip__content card-flip__content--front">
+      <img class="fancy-hover__image" src="founder/Untitled4.PNG" >
+      <div class="fancy-hover__fancy"></div>
+      <div class="fancy-hover__element fancy-hover__element--title">
+      <center>  <span style="color:#fff; padding:0px;">Amulaya Mahajan<br>
+        <p style="font-size:10px;">BOARD ADVISOR,UCD</p></center>
+      </div>
+      <div class="fancy-hover__element fancy-hover__element--subtitle">
+        <p class="fancy-hover__text">Description<br>(click me)</p>
+      </div>
+    </figure>
+    <!-- BACK SIDE -->
+
+</figure>
+<script>$(document).ready(function() {
+  var classClicked = 'clicked';
+  $('.card-flip').click(function() {
+    if($(this).hasClass(classClicked)) {
+      $(this).removeClass(classClicked);
+    }
+    else {
+      $(this).addClass(classClicked);
+    }
+  }).mouseleave(function() {
+    $(this).removeClass(classClicked);
+  });
+})</script>
+  </body>
+</html>
